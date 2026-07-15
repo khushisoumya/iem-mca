@@ -22,7 +22,7 @@ function PoPsoPage() {
             </p>
           </div>
           <a
-            href="https://mca.uem.edu.in/pdfs/List_of_PO-PSO.pdf"
+            href="/pdfs/po-pso.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md text-white text-sm font-medium px-4 py-2.5 rounded-md transition-all duration-200 shrink-0"

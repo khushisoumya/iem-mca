@@ -2,12 +2,12 @@ import { FileDown, BookOpen } from 'lucide-react'
 import PageHero from '../components/PageHero'
 
 const syllabusYears = [
-  { batch: '2025 – 2027', href: 'https://mca.uem.edu.in/pdfs/MCA%202025-27%20Detailed%20Syllabus.pdf' },
-  { batch: '2024 – 2026', href: 'https://mca.uem.edu.in/pdfs/syllabus_2024_2026.pdf' },
-  { batch: '2023 – 2025', href: 'https://mca.uem.edu.in/pdfs/syllabus_2023_2025.pdf' },
-  { batch: '2022 – 2024', href: 'https://mca.uem.edu.in/pdfs/syllabus_2022_2024.pdf' },
-  { batch: '2021 – 2023', href: 'https://mca.uem.edu.in/pdfs/syllabus_2021_2023.pdf' },
-  { batch: '2020 – 2022', href: 'https://mca.uem.edu.in/pdfs/syllabus_2020_2022.pdf' },
+  { year: '2020-2022', href: '/pdfs/syllabus_2020_2022.pdf' },
+  { year: '2021-2023', href: '/pdfs/syllabus_2021_2023.pdf' },
+  { year: '2022-2024', href: '/pdfs/syllabus_2022_2024.pdf' },
+  { year: '2023-2025', href: '/pdfs/syllabus_2023_2025.pdf' },
+  { year: '2024-2026', href: '/pdfs/syllabus_2024_2026.pdf' },
+  { year: '2025-2027', href: '/pdfs/syllabus_2025_2027.pdf' },
 ]
 
 function SyllabusPage() {
@@ -23,7 +23,7 @@ function SyllabusPage() {
         <div className="flex flex-col gap-4">
           {syllabusYears.map((item) => (
             <a
-              key={item.batch}
+              key={item.year}
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
@@ -34,7 +34,7 @@ function SyllabusPage() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-navy font-semibold text-sm sm:text-base">
-                  Batch {item.batch}
+                  Batch {item.year}
                 </h3>
                 <p className="text-gray-500 text-xs sm:text-sm">Detailed Syllabus PDF</p>
               </div>

@@ -1,6 +1,6 @@
 import { Quote } from 'lucide-react'
 import hod from "../../assets/hod-mca.jpg"
-import InfoAccordion from './InfoAccordion'
+
 
 function AboutHOD() {
   return (
@@ -53,7 +53,7 @@ function AboutHOD() {
             </div>
           </div>
 
-          <InfoAccordion />
+          
         </div>
       </div>
     </section>

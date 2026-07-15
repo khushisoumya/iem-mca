@@ -37,16 +37,21 @@ function CalendarTable({ rows }) {
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
       <table className="w-full text-sm">
         <thead>
-          <tr className="bg-gray-50 border-b border-gray-100">
-            <th className="text-left font-semibold text-navy px-5 py-3">Event</th>
-            <th className="text-left font-semibold text-navy px-5 py-3">Date</th>
+          <tr className="bg-navy">
+            <th className="text-left font-semibold text-white px-5 py-3.5">Event</th>
+            <th className="text-left font-semibold text-white px-5 py-3.5">Date</th>
           </tr>
         </thead>
         <tbody>
           {rows.map(([event, date], i) => (
-            <tr key={i} className="border-b border-gray-50 last:border-0 hover:bg-gray-50/60">
+            <tr
+              key={i}
+              className={`border-b border-gray-100 last:border-0 hover:bg-blue-50/60 transition-colors ${
+                i % 2 === 1 ? 'bg-gray-50/60' : 'bg-white'
+              }`}
+            >
               <td className="px-5 py-3 text-gray-700 align-top">{event}</td>
-              <td className="px-5 py-3 text-gray-600 align-top font-medium whitespace-nowrap">{date}</td>
+              <td className="px-5 py-3 text-brand-blue align-top font-medium whitespace-nowrap">{date}</td>
             </tr>
           ))}
         </tbody>
@@ -77,7 +82,7 @@ function AcademicCalendarPage() {
             </p>
           </div>
           <a
-            href="https://mca.uem.edu.in/academicCalendar/Academic%20Calendar%202026-1.pdf"
+            href="/pdfs/academic-calendar-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 bg-brand-blue hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md text-white text-sm font-medium px-4 py-2.5 rounded-md transition-all duration-200 shrink-0"

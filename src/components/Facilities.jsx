@@ -35,7 +35,7 @@ function Facilities() {
             Infrastructure
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-navy leading-snug mb-3">
-            World-Class Facilities
+            Major Facilities
           </h2>
           <p className="text-gray-500 text-sm sm:text-base mb-6">
             State-of-the-art infrastructure designed for hands-on computing education

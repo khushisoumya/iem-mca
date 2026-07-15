@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import StatsBar from '../components/StatsBar'
 import AboutHOD from '../components/home/AboutHOD'
+import ProgramOverview from '../components/home/ProgramOverview'
 import VisionMissionPEO from '../components/VisionMissionPEO'
 import PoPsoCalendarTeaser from '../components/home/PoPsoCalendarTeaser'
 import Facilities from '../components/Facilities'
@@ -14,6 +15,7 @@ function Home() {
       <Hero />
       <StatsBar />
       <AboutHOD />
+      <ProgramOverview />
       <VisionMissionPEO showCTA />
       <Facilities />
       <PoPsoCalendarTeaser />

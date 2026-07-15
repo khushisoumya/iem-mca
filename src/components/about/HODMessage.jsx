@@ -1,12 +1,11 @@
 import { Quote } from 'lucide-react'
-import hod from "../../assets/hod-mca.jpg" // TODO: add MCA HOD photo
-// C:\Users\user\Development\IEMA\mca-website\src\assets\hod-mca.jpg
+import hod from "../../assets/hod-mca.jpg"
 
 function HODMessage() {
   return (
     <section className="bg-gradient-to-b from-white via-blue-50/30 to-white py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-10">
           <span className="inline-block bg-blue-50 text-brand-blue text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full mb-4">
             Leadership
           </span>
@@ -24,23 +23,38 @@ function HODMessage() {
 
           <div className="relative flex flex-col sm:flex-row gap-8">
             <div className="flex flex-col items-center shrink-0 text-center">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden ring-4 ring-blue-50">
-                <img src={hod} alt="Head of Department" className="h-full w-full object-cover" />
+              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden ring-4 ring-blue-50">
+                <img src={hod} alt="Prof. Kaustuv Bhattacharjee" className="w-full h-full object-cover" />
               </div>
-              <span className="text-navy font-semibold text-sm mt-4 text-center">Prof. Kaustuv Bhattacharjee</span>
-              <span className="text-gray-400 text-xs mt-0.5">HOD, Dept. of Computer Applications</span>
+              <p className="text-navy font-semibold text-sm mt-4">Prof. Kaustuv Bhattacharjee</p>
+              <p className="text-gray-400 text-xs mt-0.5">Head of the Department</p>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center">
-              <Quote className="w-9 h-9 text-brand-blue mb-4" strokeWidth={1.5} fill="currentColor" />
-              <p className="text-navy text-sm sm:text-base leading-relaxed mb-4 font-medium">
-                We strive to build a strong foundation for our students through quality teaching,
-                practical exposure, and innovation. Our goal is to develop skilled computing
-                professionals who contribute meaningfully to industry and society.
+            <div className="flex-1 flex flex-col justify-center gap-4">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify [text-justify:inter-word]">
+                The department of Computer Applications (CA), since its inception in 2015 has
+                remained prophetic in nurturing the students in the field of computer science aided
+                multifaceted dimensions for MCA Programme. The holistic approach rendered in
+                amalgamating the academic progress of the students with the niche of cutting edge
+                technology rightly proclaims to bridge the industry-academia gap. The departmental
+                galaxy of the finest students in tune with the erudite teaching fraternity has always
+                remained committed in bringing out the best in terms of academic accomplishments and
+                creative excellence.
               </p>
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
-                I welcome you to explore our department and the opportunities it offers.
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify [text-justify:inter-word]">
+                Pledged with the noble mission to harness NEP-2020, the departmental students remain
+                engaged in multifarious inter/intra-institutional events namely the Technical fest
+                (UREKON), the Cultural fest (ECSTASIA), project and poster competition, coding
+                competition, hackathon, industry visit, industry talk and seminar, technical workshop
+                to name a few. These platforms give our students the exposure and confidence to
+                translate classroom learning into real-world problem solving.
               </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify [text-justify:inter-word]">
+                I extend a warm welcome to all prospective students to be a part of this journey —
+                one built on curiosity, discipline, and a shared commitment to excellence.
+              </p>
+
+              <p className="text-navy font-semibold text-sm mt-1">Prof. Kaustuv Bhattacharjee</p>
             </div>
           </div>
         </div>

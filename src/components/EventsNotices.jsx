@@ -23,30 +23,14 @@ const events = [
     time: '11:00 AM Onwards',
     image: event2,
   },
-  // {
-  //   month: 'MAY', day: '20',
-  //   title: 'National Science Day',
-  //   subtitle: 'Exhibitions and workshops',
-  //   location: 'Auditorium',
-  //   time: '10:00 AM Onwards',
-  //   image: event3,
-  // },
-  // {
-  //   month: 'MAY', day: '28',
-  //   title: 'Research Methodology Workshop',
-  //   subtitle: 'Hands-on workshop for scholars',
-  //   location: 'Seminar Hall',
-  //   time: '11:00 AM Onwards',
-  //   image: event4,
-  // },
+  
 ]
 
 const notices = [
   { title: 'Internal Assessment Schedule (Even Sem)', date: 'May 15, 2026' },
   { title: 'Submission of Project Reports', date: 'May 10, 2026' },
   { title: 'Departmental Seminar Series', date: 'Every Friday, 3:00 PM' },
-  { title: 'Departmental Seminar Series', date: 'Every Friday, 3:00 PM' },
-  
+  { title: 'Guest Lecture: Cloud Architecture', date: 'June 3, 2026' },
 ]
 
 function EventsNotices() {
@@ -73,9 +57,9 @@ function EventsNotices() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-5">
-              {events.map((event) => (
+              {events.map((event, i) => (
                 <div
-                  key={event.title}
+                  key={i}
                   className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="relative h-36">
@@ -122,8 +106,8 @@ function EventsNotices() {
             </div>
 
             <div className="flex flex-col divide-y divide-gray-100">
-              {notices.map((notice) => (
-                <div key={notice.title} className="flex items-start gap-2 py-3 first:pt-0">
+              {notices.map((notice, i) => (
+                <div key={i} className="flex items-start gap-2 py-3 first:pt-0">
                   <ChevronRight className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" strokeWidth={2} />
                   <div>
                     <p className="text-navy text-sm leading-snug">{notice.title}</p>
