@@ -14,9 +14,9 @@ function Home() {
       <Hero />
       <StatsBar />
       <AboutHOD />
-      <VisionMissionPEO />
-      <PoPsoCalendarTeaser />
+      <VisionMissionPEO showCTA />
       <Facilities />
+      <PoPsoCalendarTeaser />
       <EventsNotices />
       <Faculty />
       <CTA />

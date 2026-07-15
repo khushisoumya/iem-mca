@@ -1,13 +1,34 @@
+import mca1 from "../assets/mca1.webp";
+import mca2 from "../assets/mca6.jpg";
+import mca3 from "../assets/mca4.png";
+import mca4 from "../assets/mca5.jpg";
+
 const facilities = [
-  { name: 'Modern Classrooms', image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=400' },
-  { name: 'Computer Labs', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400' },
-  { name: 'Project Labs', image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400' },
-  { name: 'Digital Library', image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=400' },
-]
+  {
+    name: "Modern Classrooms",
+    image: mca1,
+  },
+  {
+    name: "Computer Labs",
+    image: mca2,
+  },
+  {
+    name: "Project Labs",
+    image: mca3,
+  },
+  {
+    name: "Digital Library",
+    image: mca4,
+  },
+];
 
 function Facilities() {
   return (
-    <section id="facilities" className="bg-white py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <>
+    <section
+  id="facilities"
+  className="bg-white py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+>
       <div className="max-w-6xl mx-auto grid md:grid-cols-[minmax(0,1fr)_2fr] gap-10 items-center">
         <div>
           <span className="inline-block bg-blue-50 text-brand-blue text-xs font-medium px-3 py-1.5 rounded-full mb-4">
@@ -39,6 +60,7 @@ function Facilities() {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

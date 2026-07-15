@@ -63,7 +63,8 @@ function InfoAccordion() {
   const [openIndex, setOpenIndex] = useState(null)
 
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+    <>
+    {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
       {items.map((item, i) => {
         const isOpen = openIndex === i
         return (
@@ -91,7 +92,8 @@ function InfoAccordion() {
           </div>
         )
       })}
-    </div>
+    </div> */}
+    </>
   )
 }
 

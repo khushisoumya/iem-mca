@@ -1,78 +1,137 @@
-import { Clock, MapPin, FileText } from 'lucide-react'
+import { MapPin, Clock, ArrowRight, ChevronRight, Bell } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+import event1 from "../assets/bsh19.webp"
+import event2 from "../assets/bsh20.jpg"
+import event3 from "../assets/bsh21.jpg"
+import event4 from "../assets/bsh27.jpeg"
+
 const events = [
-  { month: 'AUG', day: '15', title: 'Independence Day Celebration', description: 'Flag hoisting followed by cultural performances', time: '09:00 AM - 11:00 AM', location: 'Main Auditorium' },
-  { month: 'SEP', day: '05', title: 'Teachers Day Felicitation', description: 'Honoring faculty contributions', time: '11:00 AM - 01:00 PM', location: 'Seminar Hall' },
+  {
+    month: 'AUG', day: '15',
+    title: 'Independence Day Celebration',
+    subtitle: 'Flag hoisting & cultural performances',
+    location: 'Main Auditorium',
+    time: '09:00 AM Onwards',
+    image: event1,
+  },
+  {
+    month: 'SEP', day: '05',
+    title: 'Teachers Day Felicitation',
+    subtitle: 'Honoring faculty contributions',
+    location: 'Seminar Hall',
+    time: '11:00 AM Onwards',
+    image: event2,
+  },
+  // {
+  //   month: 'MAY', day: '20',
+  //   title: 'National Science Day',
+  //   subtitle: 'Exhibitions and workshops',
+  //   location: 'Auditorium',
+  //   time: '10:00 AM Onwards',
+  //   image: event3,
+  // },
+  // {
+  //   month: 'MAY', day: '28',
+  //   title: 'Research Methodology Workshop',
+  //   subtitle: 'Hands-on workshop for scholars',
+  //   location: 'Seminar Hall',
+  //   time: '11:00 AM Onwards',
+  //   image: event4,
+  // },
 ]
 
 const notices = [
   { title: 'Internal Assessment Schedule (Even Sem)', date: 'May 15, 2026' },
   { title: 'Submission of Project Reports', date: 'May 10, 2026' },
   { title: 'Departmental Seminar Series', date: 'Every Friday, 3:00 PM' },
+  { title: 'Departmental Seminar Series', date: 'Every Friday, 3:00 PM' },
+  
 ]
 
 function EventsNotices() {
   return (
     <section className="bg-gray-50 py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 sm:p-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-1">
-            <span className="inline-block bg-blue-50 text-brand-blue text-xs font-medium px-3 py-1.5 rounded-full">
-              Campus Life
-            </span>
-            <Link to="/events" className="text-brand-blue text-sm font-medium flex items-center gap-1">
-              View All <span>→</span>
-            </Link>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-navy mt-3 mb-6">Latest Events</h2>
-
-          <div className="flex flex-col gap-4">
-            {events.map((event) => (
-              <div key={event.title} className="bg-gray-50 rounded-xl border border-gray-100 p-4 flex flex-col sm:flex-row gap-4">
-                <div className="bg-blue-50 rounded-lg w-14 h-14 flex flex-col items-center justify-center shrink-0">
-                  <span className="text-brand-blue text-[10px] font-semibold">{event.month}</span>
-                  <span className="text-navy text-lg font-bold leading-none">{event.day}</span>
-                </div>
-                <div>
-                  <h4 className="text-navy font-semibold text-sm mb-1">{event.title}</h4>
-                  <p className="text-gray-500 text-xs mb-2">{event.description}</p>
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-gray-400 text-xs">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" strokeWidth={2} />
-                      {event.time}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5" strokeWidth={2} />
-                      {event.location}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <span className="inline-block bg-blue-50 text-brand-blue text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full mb-3">
+            Campus News
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-navy">Stay Informed. Stay Inspired.</h2>
+          <div className="w-16 h-1 bg-brand-blue rounded-full mx-auto mt-4" />
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 sm:p-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-1">
-            <span className="inline-block bg-orange-50 text-orange-500 text-xs font-medium px-3 py-1.5 rounded-full">
-              Important Updates
-            </span>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-navy mt-3 mb-6">Notices</h2>
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8">
+          {/* Left: Events */}
+          <div>
+            <div className="flex items-center justify-between mb-5">
+              <h3 className="text-navy font-bold text-lg">Upcoming Events</h3>
+              <Link to="/events" className="text-brand-blue text-sm font-medium flex items-center gap-1 hover:gap-1.5 transition-all">
+                View All <ArrowRight className="w-4 h-4" strokeWidth={2} />
+              </Link>
+            </div>
 
-          <div className="divide-y divide-gray-100">
-            {notices.map((notice) => (
-              <div key={notice.title} className="flex items-start gap-3 py-4 first:pt-0">
-                <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                  <FileText className="w-4 h-4 text-brand-blue" strokeWidth={2} />
+            <div className="grid sm:grid-cols-2 gap-5">
+              {events.map((event) => (
+                <div
+                  key={event.title}
+                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="relative h-36">
+                    <img src={event.image} alt={event.title} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent" />
+                    <div className="absolute top-3 left-3 bg-brand-blue text-white rounded-lg px-2.5 py-1.5 flex flex-col items-center leading-none">
+                      <span className="text-[10px] font-semibold">{event.month}</span>
+                      <span className="text-sm font-bold">{event.day}</span>
+                    </div>
+                  </div>
+
+                  <div className="p-4">
+                    <h4 className="text-navy font-semibold text-sm mb-1">{event.title}</h4>
+                    <p className="text-gray-500 text-xs mb-3">{event.subtitle}</p>
+                    <div className="flex flex-col gap-1.5 text-gray-400 text-xs mb-3">
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 shrink-0" strokeWidth={2} />
+                        {event.location}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 shrink-0" strokeWidth={2} />
+                        {event.time}
+                      </span>
+                    </div>
+                    <Link
+                      to="/events"
+                      className="text-brand-blue text-xs font-medium flex items-center gap-1 hover:gap-1.5 transition-all"
+                    >
+                      View Details <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} />
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-navy font-medium text-sm">{notice.title}</h4>
-                  <p className="text-gray-400 text-xs mt-0.5">{notice.date}</p>
-                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Notices */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 h-fit">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
+                <Bell className="w-4.5 h-4.5 text-brand-blue" strokeWidth={2} />
               </div>
-            ))}
+              <h3 className="text-navy font-bold text-base">Notices</h3>
+            </div>
+
+            <div className="flex flex-col divide-y divide-gray-100">
+              {notices.map((notice) => (
+                <div key={notice.title} className="flex items-start gap-2 py-3 first:pt-0">
+                  <ChevronRight className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" strokeWidth={2} />
+                  <div>
+                    <p className="text-navy text-sm leading-snug">{notice.title}</p>
+                    <p className="text-gray-400 text-xs mt-1">{notice.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

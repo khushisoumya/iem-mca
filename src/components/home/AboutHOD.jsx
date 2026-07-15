@@ -10,7 +10,7 @@ function AboutHOD() {
           <span className="inline-block bg-blue-50 text-brand-blue text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full mb-4">
             About Us
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-navy">Department of Computer Applications</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-navy">Message From HOD</h2>
           <div className="w-16 h-1 bg-brand-blue rounded-full mx-auto mt-4" />
         </div>
 
@@ -34,7 +34,7 @@ function AboutHOD() {
             <div className="flex-1 flex flex-col justify-center">
               <div className="flex items-center gap-2 text-brand-blue text-xs font-semibold mb-3">
                 <Quote className="w-4 h-4" strokeWidth={2} />
-                FROM THE DESK OF HOD
+                
               </div>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify [text-justify:inter-word]">
                 The department of Computer Applications (CA), since its inception in 2015 has

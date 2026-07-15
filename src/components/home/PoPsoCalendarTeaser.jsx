@@ -3,18 +3,23 @@ import { FileDown, CalendarDays, ListChecks, ArrowRight } from 'lucide-react'
 
 function PoPsoCalendarTeaser() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
       <div className="grid md:grid-cols-2 gap-6 items-stretch">
         {/* PO & PSO */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 border-l-4 border-l-brand-blue p-6 sm:p-7 flex flex-col">
           <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
             <ListChecks className="w-6 h-6 text-brand-blue" strokeWidth={2} />
           </div>
-          <h3 className="text-navy font-bold text-lg sm:text-xl mb-2">PO and PSO</h3>
+
+          <h3 className="text-navy font-bold text-lg sm:text-xl mb-2">
+            PO and PSO
+          </h3>
+
           <p className="text-gray-600 text-sm leading-relaxed mb-5">
-            List of Program Outcomes (POs) and Program Specific Outcomes (PSOs) for the MCA
-            programme are available for download below.
+            List of Program Outcomes (POs) and Program Specific Outcomes (PSOs)
+            for the MCA programme are available for download below.
           </p>
+
           <a
             href="https://mca.uem.edu.in/pdfs/List_of_PO-PSO.pdf"
             target="_blank"
@@ -31,7 +36,10 @@ function PoPsoCalendarTeaser() {
           <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center mb-4">
             <CalendarDays className="w-6 h-6 text-orange-500" strokeWidth={2} />
           </div>
-          <h3 className="text-navy font-bold text-lg sm:text-xl mb-4">Academic Calendar</h3>
+
+          <h3 className="text-navy font-bold text-lg sm:text-xl mb-4">
+            Academic Calendar
+          </h3>
 
           <ul className="space-y-2.5 mb-5">
             <li>
@@ -43,6 +51,7 @@ function PoPsoCalendarTeaser() {
                 Batch 2026 — Even Semester
               </Link>
             </li>
+
             <li>
               <Link
                 to="/academics/calendar"
