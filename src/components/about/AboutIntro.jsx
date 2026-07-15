@@ -1,0 +1,27 @@
+import { Landmark } from 'lucide-react'
+
+function AboutIntro() {
+  return (
+    <section className="bg-gray-50">
+      <div className="px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+        <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-start gap-6 sm:gap-7">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-blue to-navy flex items-center justify-center shrink-0">
+            <Landmark className="w-7 h-7 text-white" strokeWidth={1.8} />
+          </div>
+          <div>
+            <h2 className="text-navy font-bold text-xl sm:text-2xl mb-3">About Our Department</h2>
+            <div className="w-12 h-1 bg-brand-blue rounded-full mb-4" />
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl">
+              The Department of Computer Applications offers a comprehensive MCA program
+              that blends strong computing fundamentals with hands-on, industry-aligned
+              training — preparing graduates for careers across software development,
+              data science and enterprise technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default AboutIntro
