@@ -10,23 +10,27 @@ import EContentPage from './pages/EContentPage'
 import EventsPage from './pages/EventsPage'
 import ContactPage from './pages/ContactPage'
 import AcademicsPage from './pages/AcademicsPage'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/vision-mission" element={<VisionMissionPage />} />
-        <Route path="/academics/po-pso" element={<PoPsoPage />} />
-        <Route path="/academics/syllabus" element={<SyllabusPage />} />
-        <Route path="/academics/calendar" element={<AcademicCalendarPage />} />
-        <Route path="/academics/e-content" element={<EContentPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/academics" element={<AcademicsPage />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/vision-mission" element={<VisionMissionPage />} />
+          <Route path="/academics/po-pso" element={<PoPsoPage />} />
+          <Route path="/academics/syllabus" element={<SyllabusPage />} />
+          <Route path="/academics/calendar" element={<AcademicCalendarPage />} />
+          <Route path="/academics/e-content" element={<EContentPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/academics" element={<AcademicsPage />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
 
