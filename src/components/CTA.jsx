@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function CTA() {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16">
-      <div className="max-w-6xl mx-auto relative bg-brand-blue rounded-2xl overflow-hidden border border-brand-blue shadow-sm shadow-blue-300/40">
+      <div className="max-w-6xl mx-auto relative bg-blue-900 rounded-2xl overflow-hidden border border-brand-blue shadow-sm shadow-blue-300/40">
         <GraduationCap
           className="absolute right-6 top-1/2 hidden w-40 h-40 -translate-y-1/2 text-white/10 sm:block"
           strokeWidth={1}
